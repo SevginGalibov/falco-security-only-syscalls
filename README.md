@@ -47,7 +47,7 @@ helm upgrade --install falco falcosecurity/falco \
 --namespace falco --create-namespace \
 -f falco-values.yaml \
 -f custom-rules.yaml \
---set falcosidekick.config.teams.webhookurl="https://demirorenmedya.webhook.office.com/..." \
+--set falcosidekick.config.teams.webhookurl="https://blabla.webhook.office.com/..." \
 --set falcosidekick.config.teams.minimumpriority=Critical \
 --set falcosidekick.config.teams.outputformat=all
 ```
@@ -86,6 +86,26 @@ Bu kurulum ile:
 * 🔥 **Gürültüsüz, verimli, temiz güvenlik görünürlüğü sağlanır.**
 
 ---
+## 🌐 Local UI Erişimi (Port Forwarding)
+
+Uygulamayı local erişime açmak için terminalden aşağıdaki komutu kullanabilirsiniz yada ingress oluşturarak hostname üzerinden erişebilirsiniz.:
+
+```bash
+kubectl port-forward svc/falcosidekick-ui 2801:2801 -n falco
+![Dashboard Görünümü](./images/dashboard-example.png)
+
+Yukarıdaki ekranda sistemin anlık durumunu takip edebilirsiniz.
+```
+## 📊 Uygulama Arayüzü Örneği
+
+![UI Dashboard Görünümü](https://imgur.com/a/OVLszP1)
+
+![UI Json Görünümü](https://imgur.com/a/p4NrF6I)
+
+![Teams Alarm Görünümü]( (https://imgur.com/a/fb3mhp8)
+
+
+
 
 ## 📚 Ek Kaynaklar
 

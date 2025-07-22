@@ -2,7 +2,7 @@
 
 Bu repo; **Kubernetes ortamında Falco Security ile minimal, odaklanmış ve görsel destekli güvenlik izleme** kurulumunu dokümante eder. Amaç: sadece **kritik güvenlik olaylarını anlamlı şekilde izlemek**, **gürültüsüz çalışmak** ve **Teams ile anlık bildirim almak**.
 
-![Falco Architecture](https://falco.org/assets/img/falco-architecture.png)
+
 
 ---
 

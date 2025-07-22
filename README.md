@@ -9,9 +9,13 @@ Bu repo; **Kubernetes ortamında Falco Security ile minimal, odaklanmış ve gö
 ## 🚀 Proje Amacı
 
 ✅ **Sadece önemli güvenlik olaylarını izlemek.**
+
 ✅ **Varsayılan kurallar yerine kendi kritik odaklı custom kurallar ile izlemek.**
+
 ✅ **Microsoft Teams entegrasyonu ile anlık alarm almak.**
+
 ✅ **Falcosidekick WebUI + Redis ile görsel alarm takibi.**
+
 ✅ **Gürültüsüz, sade, operasyonel anlamlı loglama.**
 
 ---

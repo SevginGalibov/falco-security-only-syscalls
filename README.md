@@ -93,18 +93,14 @@ Uygulamayı local erişime açmak için terminalden aşağıdaki komutu kullanab
 ```bash
 kubectl port-forward svc/falcosidekick-ui 2801:2801 -n falco
 ![Dashboard Görünümü](./images/dashboard-example.png)
-
-Yukarıdaki ekranda sistemin anlık durumunu takip edebilirsiniz.
 ```
-## 📊 Uygulama Arayüzü Örneği
+## 📊 Uygulama Arayüzü ve alarm görselleri
 
-![UI Dashboard Görünümü](https://imgur.com/a/OVLszP1)
+![UI Dashboard Görünümü](https://imgur.com/sZqczOJ)
 
-![UI Json Görünümü](https://imgur.com/a/p4NrF6I)
+![UI Json Görünümü](https://imgur.com/ALQgRLu)
 
-![Teams Alarm Görünümü]( (https://imgur.com/a/fb3mhp8)
-
-
+![Teams Alarm Görünümü]( (https://imgur.com/biMMUgN)
 
 
 ## 📚 Ek Kaynaklar

@@ -1,0 +1,27 @@
+falco:
+  rules_files:
+    - /etc/falco/rules.d
+
+  append_output:
+    - match:
+        source: syscall
+      extra_output: "pod_uid=%k8smeta.pod.uid, pod_name=%k8smeta.pod.name, namespace_name=%k8smeta.ns.name"
+
+  rate:
+    enabled: true
+    rate: 1
+    max_burst: 1
+
+falcosidekick:
+  enabled: true
+  webui:
+    enabled: true
+  config:
+    Ratelimit: true
+    RatelimitSeconds: 60
+
+collectors:
+  kubernetes:
+    enabled: true
+
+tty: true

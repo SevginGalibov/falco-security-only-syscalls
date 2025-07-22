@@ -1,0 +1,31 @@
+customRules:
+  custom-rules.yaml: |-
+    - macro: container
+      condition: (evt.num < 0) or (container.id != host)
+
+    # 1. KURAL: Pod'a exec veya shell açılma alarmı
+    - rule: Pod exec or shell access detected
+      desc: Detect exec or shell opened inside a pod (bash/sh)
+      condition: container and proc.name in (bash, sh) and evt.type=execve
+      output: >
+        CRITICAL: Shell exec detected (user=%user.name cmd=%proc.cmdline container=%container.id)
+      priority: CRITICAL
+      tags: [shell, exec, security]
+
+    # 2. KURAL: Netcat veya tarama aracı kullanımı
+    - rule: Network scanner or netcat execution in pod
+      desc: Detect use of netcat or known scanner binaries inside pod
+      condition: container and proc.name in (nc, netcat, nmap, masscan, zmap) and evt.type=execve
+      output: >
+        CRITICAL: Network scan tool detected (cmd=%proc.cmdline container=%container.id)
+      priority: CRITICAL
+      tags: [network, scan, security]
+
+    # 3. KURAL: Pod içinde dosya oluşturma denemesi
+    - rule: File creation or edit tools detected in pod
+      desc: Detect file creation/editing commands inside pod
+      condition: container and proc.name in (touch, mkdir, nano, vim) and evt.type=execve
+      output: >
+        CRITICAL: File operation detected (cmd=%proc.cmdline container=%container.id)
+      priority: CRITICAL
+      tags: [file, create, edit, security]

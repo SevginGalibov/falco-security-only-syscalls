@@ -96,11 +96,11 @@ kubectl port-forward svc/falcosidekick-ui 2801:2801 -n falco
 ```
 ## 📊 Uygulama Arayüzü ve alarm görselleri
 
-![UI Dashboard Görünümü](https://imgur.com/sZqczOJ)
+![UI Dashboard Görünümü](https://imgur.com/sZqczOJ.png)
 
-![UI Json Görünümü](https://imgur.com/ALQgRLu)
+![UI Json Görünümü](https://imgur.com/ALQgRLu.png)
 
-![Teams Alarm Görünümü]( (https://imgur.com/biMMUgN)
+![Teams Alarm Görünümü](https://imgur.com/biMMUgN.png)
 
 
 ## 📚 Ek Kaynaklar
